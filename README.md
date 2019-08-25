@@ -1,73 +1,78 @@
 <p align="center">
   <a href="https://facebook.com/lourencodaniel.carlos" target="_blank" >
-    <h2>G'CableTv</h2>
+    <h1>G'CableTv</h1>
+    <h3>A gestão mora aquí!!!</h3>
   </a>
 </p>
 <p align="center">
 </p>
 
-[G'CableTv](https://facebook.com/lourencodaniel.carlos) is a rapid development framework for PHP which
-uses commonly known design patterns like Associative Data
-Mapping, Front Controller, and MVC.  Our primary goal is to provide a structured
-framework that enables PHP users at all levels to rapidly develop robust web
-applications, without any loss to flexibility.
+[G'CableTv](https://facebook.com/lourencodaniel.carlos) é uma api nodejs desenvolvida por [Lourenço Daniel Sebastião Carlos](https://facebook.com/lourencodaniel.carlos) (tabém conhecido por [Enzo Daniel Carlos](https://facebook.com/lourencodaniel.carlos)), que tem como principal objectivo fornecer para o cliente o CRUD completo das entidades relevantes num sistema de gestão. É totalmente padronizado, com gestão de status de erros (tudo em JSON), é de fácil utilização, fornecendo assim uma aprendizagem curta e ao mesmo tempo poderosa.
+_Enzo Daniel Carlos (25/08/2019 - 22h:42min.)_
 
-## Installing CakePHP via Composer
+## Instalação
 
-You can install CakePHP into your project using
-[Composer](https://getcomposer.org).  If you're starting a new project, we
-recommend using the [app skeleton](https://github.com/cakephp/app) as
-a starting point. For existing applications you can run the following:
+Primeiro tu deves ter o
+[NodeJs](https://nodejs.org) instalado.  Faça um clone do repositório, eu
+recomendo que uses o [VisualStudioCode](https://code.visualstudio.com) como editor. 
 
-``` bash
-$ composer require cakephp/cakephp
+**Abra o arquivo db.js (caminho: models/db.js), apartir da linha 4 verás o codigo:**
+``` 
+const sequelize = new Sequelize("testcabletv", "root", "", {
+  host: "localhost",
+  dialect: "mysql",
+  define: {
+    underscored: true
+  }
+});
 ```
+**#Dicas:**
+1: _"testcabletv"_ - coloque o nome do teu banco de dados (obs.: primeiro cria o banco de dados).
+2: _"root"_ - é o nome do usuário do _mysql_, isso é padrão, mas se estiveres a usar um outro tipo de conexão podes trocar.
+3: _""_ - é onde deves colocar a _password(Palavra-passe)_ do teu banco de dados.
+4: _host: "localhost"_ - é onde deves colocar o nome do teu servidor. 
+5: _dielect: "mysql"_ - é onde deves colocar o tipo de banco de dados em que vais te conectar, neste caso o meu é _mysql_.
 
-## Running Tests
 
-Assuming you have PHPUnit installed system wide using one of the methods stated
-[here](https://phpunit.de/manual/current/en/installation.html), you can run the
-tests for CakePHP by doing the following:
+**Abra o arquivo db.js (caminho: models/db.js), quase a ultima deste arquivo verás o código:**
 
-1. Copy `phpunit.xml.dist` to `phpunit.xml`.
-2. Add the relevant database credentials to your `phpunit.xml` if you want to run tests against
-   a non-SQLite datasource.
-3. Run `phpunit`.
+``` 
+/* db.sequelize.sync({
+  force: true
+}) */
+```
+**#Dicas:**
+1: _"descomenta o código"_ tem de ficar assim:
+``` 
+db.sequelize.sync({
+  force: true
+})
+```
+ATT: _"root"_ - esse código é responsável pela criação das tabelas no banco de dados, bem como os relacionamento entre elas. **Uma vez executado, deve-se comentar, caso contrário, irá apagar e criar novas tabelas sempre que exutares a API**.
 
-## Some Handy Links
+**Abra o CMD na raiz do projecto e comando: npm install**
+``` 
+gcabletv01> npm install
 
-* [CakePHP](https://cakephp.org) - The rapid development PHP framework.
-* [CookBook](https://book.cakephp.org) - The CakePHP user documentation; start learning here!
-* [API](https://api.cakephp.org) - A reference to CakePHP's classes.
-* [Awesome CakePHP](https://github.com/FriendsOfCake/awesome-cakephp) - A list of featured resources around the framework.
-* [Plugins](https://plugins.cakephp.org) - A repository of extensions to the framework.
-* [The Bakery](https://bakery.cakephp.org) - Tips, tutorials and articles.
-* [Community Center](https://community.cakephp.org) - A source for everything community related.
-* [Training](https://training.cakephp.org) - Join a live session and get skilled with the framework.
-* [CakeFest](https://cakefest.org) - Don't miss our annual CakePHP conference.
-* [Cake Software Foundation](https://cakefoundation.org) - Promoting development related to CakePHP.
+```
+**Depois da instalação dos pacote execute para iniciar a API o comando: node index.js**
+``` 
+gcabletv01> node index.js
 
-## Get Support!
+```
+## Testando a API
 
-* [Slack](https://cakesf.herokuapp.com/) - Join us on Slack.
-* [#cakephp](https://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake.
-* [Forum](https://discourse.cakephp.org/) - Official CakePHP forum.
-* [GitHub Issues](https://github.com/cakephp/cakephp/issues) - Got issues? Please tell us!
-* [Roadmaps](https://github.com/cakephp/cakephp/wiki#roadmaps) - Want to contribute? Get involved!
+Obviamente as tabelas vão estar sem dados para retornar, teremos que add dados.
 
-## Contributing
+Essa **API** tem muitas rotas, para ser curto e objectivo faça isso:
 
-* [CONTRIBUTING.md](.github/CONTRIBUTING.md) - Quick pointers for contributing to the CakePHP project.
-* [CookBook "Contributing" Section](https://book.cakephp.org/3.0/en/contributing.html) - Details about contributing to the project.
+1. Abra a pasta `routes` que está na pasta do projecto e Analise cada rota estabelecidas.
+2. Abra o arquivo `index.js` e decore as chamadas dos conjuntos de rotas.
+3. Teste as rotas, e preferência use o [Postman](https://www.getpostman.com) para testar a rotas.
 
-# Security
+## Qualquer Dúvida
+**Facebook**: `Enzo Daniel Carlos`
+**Instagram**: `@enzodanielcarlos`
+**WhatsApp**: `+244 936785605`
+**Call**: `+244 916785605 / +244 936785605`
 
-If you’ve found a security issue in CakePHP, please use the following procedure instead of the normal bug reporting system. Instead of using the bug tracker, mailing list or IRC please send an email to security [at] cakephp.org. Emails sent to this address go to the CakePHP core team on a private mailing list.
-
-For each report, we try to first confirm the vulnerability. Once confirmed, the CakePHP team will take the following actions:
-
-- Acknowledge to the reporter that we’ve received the issue, and are working on a fix. We ask that the reporter keep the issue confidential until we announce it.
-- Get a fix/patch prepared.
-- Prepare a post describing the vulnerability, and the possible exploits.
-- Release new versions of all affected versions.
-- Prominently feature the problem in the release announcement.
