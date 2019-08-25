@@ -29,10 +29,15 @@ const sequelize = new Sequelize("testcabletv", "root", "", {
 });
 ```
 **#Dicas:**
+
 1: _"testcabletv"_ - coloque o nome do teu banco de dados (obs.: primeiro cria o banco de dados).
+
 2: _"root"_ - é o nome do usuário do _mysql_, isso é padrão, mas se estiveres a usar um outro tipo de conexão podes trocar.
+
 3: _""_ - é onde deves colocar a _password(Palavra-passe)_ do teu banco de dados.
+
 4: _host: "localhost"_ - é onde deves colocar o nome do teu servidor. 
+
 5: _dielect: "mysql"_ - é onde deves colocar o tipo de banco de dados em que vais te conectar, neste caso o meu é _mysql_.
 
 
@@ -44,6 +49,7 @@ const sequelize = new Sequelize("testcabletv", "root", "", {
 }) */
 ```
 **#Dicas:**
+
 1: _"descomenta o código"_ tem de ficar assim:
 ``` 
 db.sequelize.sync({
