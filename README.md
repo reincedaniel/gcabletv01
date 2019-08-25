@@ -7,7 +7,9 @@
 <p align="center">
 </p>
 
-[G'CableTv](https://facebook.com/lourencodaniel.carlos) é uma api nodejs desenvolvida por [Lourenço Daniel Sebastião Carlos](https://facebook.com/lourencodaniel.carlos) (tabém conhecido por [Enzo Daniel Carlos](https://facebook.com/lourencodaniel.carlos)), que tem como principal objectivo fornecer para o cliente o CRUD completo das entidades relevantes num sistema de gestão. É totalmente padronizado, com gestão de status de erros (tudo em JSON), é de fácil utilização, fornecendo assim uma aprendizagem curta e ao mesmo tempo poderosa.
+[G'CableTv](https://facebook.com/lourencodaniel.carlos) é uma api nodejs para gestão de empresa voltadas à TV por cabo, desenvolvida por [Lourenço Daniel Sebastião Carlos](https://facebook.com/lourencodaniel.carlos) (também conhecido por [Enzo Daniel Carlos](https://facebook.com/lourencodaniel.carlos)), que tem como principal objectivo fornecer para o cliente o CRUD completo das entidades relevantes num sistema de gestão. É totalmente padronizado, com gestão de status de erros (tudo em JSON), é de fácil utilização, fornecendo assim uma aprendizagem curta e ao mesmo tempo poderosa.
+
+**(o_^)**
 _Enzo Daniel Carlos (25/08/2019 - 22h:42min.)_
 
 ## Instalação
@@ -71,8 +73,12 @@ Essa **API** tem muitas rotas, para ser curto e objectivo faça isso:
 3. Teste as rotas, e preferência use o [Postman](https://www.getpostman.com) para testar a rotas.
 
 ## Qualquer Dúvida
+
 **Facebook**: `Enzo Daniel Carlos`
+
 **Instagram**: `@enzodanielcarlos`
+
 **WhatsApp**: `+244 936785605`
+
 **Call**: `+244 916785605 / +244 936785605`
 
