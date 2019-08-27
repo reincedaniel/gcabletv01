@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
     var code = 500
     var message = 'Internal Server Error'
     //var result = ''
+    response = 0;
 
     var page = req.query.page || 1
     var limit = req.query.limit || 5
